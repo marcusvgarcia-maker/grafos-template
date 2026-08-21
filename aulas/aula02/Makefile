@@ -2,7 +2,7 @@
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -std=c11 -lm
-TARGET = main
+TARGET = a.out
 SRC = *.c
 OBJ = *.o
 

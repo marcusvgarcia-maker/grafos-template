@@ -2,11 +2,9 @@
 #include "grafo_matriz.h"
 
 int main() {
-    int numero_vertices = 8;
-
     GrafoMatriz grafo;
-    
-    incializar(&grafo, numero_vertices);
+
+    inicializar(&grafo, 8);
 
     inserir_aresta(&grafo, 0, 1);
     inserir_aresta(&grafo, 0, 2);
@@ -20,17 +18,16 @@ int main() {
     inserir_aresta(&grafo, 7, 5);
     inserir_aresta(&grafo, 7, 6);
 
-    printf("Matriz de Adjacencia - grafo não orientado:\n");
+    printf("Matriz de Adjacencia - grafo nao orientado\n");
+    exibir_matriz(&grafo);
+    
+    inicializar(&grafo, 3);
+    inserir_arco(&grafo, 0, 1);
+    inserir_arco(&grafo, 1, 2);
+    inserir_arco(&grafo, 2, 0);
 
-    inserir_aresta(&grafo, 2, 3);
-    inserir_aresta(&grafo, 2, 6);
-    inserir_aresta(&grafo, 3, 6);
-    inserir_aresta(&grafo, 7, 4);
-    inserir_aresta(&grafo, 7, 5);
-    inserir_aresta(&grafo, 7, 6);
+    printf("Matriz de Adjacencia - grafo orientado \n");
+    exibir_matriz(&grafo);
 
-    printf("Matriz de Adjacencia - grafo não")
-    exibir_matriz((&grafo));
-
-    incializar(&grafo, 3);
+    return 0;
 }
